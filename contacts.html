@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Снежная вершина</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+
+<body>
+    <main>
+        <div class="main-content">
+            <section class="contacts-section">
+                <header class="header">
+                    <div class="container">
+                        <div class="logo">
+                            <h1>Снежная вершина</h1>
+                        </div>
+                        <nav class="main-nav">
+                            <ul>
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="services.html">Услуги</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+
+                <div class="contacts-container">
+                    <div class="contact-info">
+                        <h2>Контакты</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="icon-phone"></i>
+                                <span class="contact-value" data-type="phone">+7 (999) 123-45-67</span>
+                                <span class="copy-tooltip">Нажмите чтобы скопировать</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="icon-email"></i>
+                                <span class="contact-value" data-type="email">info@snowpeak.ru</span>
+                                <span class="copy-tooltip">Нажмите чтобы скопировать</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="icon-location"></i>
+                                <span class="contact-value" data-type="address">Московская область, Дмитровский
+                                    городской округ, деревня Шуколово</span>
+                                <span class="copy-tooltip">Нажмите чтобы скопировать</span>
+                            </div>
+                        </div>
+                        <div class="contact-map">
+                            <div class="simple-map">
+                                <div class="map-marker" id="mapMarker">
+                                    <div class="marker-point"></div>
+                                    <div class="marker-pulse"></div>
+                                </div>
+                                <div class="map-popup" id="mapPopup">
+                                    <!-- ... -->
+                                </div>
+                                <img src="img/contacts/map.jpg" alt="Карта расположения курорта">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Обратная связь</h3>
+                        <p class="form-description">Напишите нам, и мы свяжемся с вами в ближайшее время. Ответим на все
+                            ваши вопросы и поможем с организацией отдыха.</p>
+                        <form id="feedbackForm">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Отправить</button>
+                            <div class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-content">
+                            <div class="footer-info">
+                                <p>© 2024 Горнолыжный курорт "Снежная вершина"</p>
+                            </div>
+                            <div class="footer-contacts">
+                                <p>Телефон: +7 (999) 123-45-67</p>
+                                <p>Email: info@snowpeak.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+/* Анимации для заголовка и текста на главной странице */
+.animate-title {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInDown 1s ease forwards;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Анимация затемнения для main-content */
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Контент поверх затемнения */
+.hero-content,
+.services-container {
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для навигации */
+.main-nav {
+    position: relative;
+    z-index: 2;
+}
+
+.main-nav ul li {
+    opacity: 0;
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.main-nav ul li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.main-nav ul li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.main-nav ul li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
